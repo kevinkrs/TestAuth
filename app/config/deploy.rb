@@ -18,8 +18,7 @@ set :cache_path, "var/cache"
 set :app_config_path,   app_path + "/config"
 
 set   :scm,           :git
-set   :repository,    "file:///Users/Kevin/Documents/Websites/TestAuth"
-set   :deploy_via,    :copy
+set   :repository,    "https://github.com/kevinkrs/TestAuth.git"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `subversion`, `mercurial`, `perforce`, or `none`
 
 set :model_manager, "doctrine"
