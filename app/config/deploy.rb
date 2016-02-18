@@ -1,6 +1,6 @@
 set :application, "TestAuth"
 set :domain,      "developmentlocatie.nl"
-set :user,  "root"
+set :user,  "admin"
 set :deploy_to,   "/home/admin/web/developmentlocatie.nl/public_html/"
 set :app_path,    "app"
 set :shared_files,      ["app/config/parameters.yml"]
@@ -31,3 +31,7 @@ set  :keep_releases,  3
 
 # Be more verbose by uncommenting the following line
 # logger.level = Logger::MAX_LEVEL
+
+set :symfony_env_prod, "prod"
+after "deploy:update", "deploy:cleanup"
+set :use_sudo, false
